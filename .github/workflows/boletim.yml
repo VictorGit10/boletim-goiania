@@ -1,0 +1,60 @@
+name: boletim
+
+on:
+  schedule:
+    - cron: "30 9 * * *"    # 06h30 em Brasília (o CEMPA publica a rodada 00Z por volta das 03h)
+    - cron: "30 13 * * *"   # 10h30: repescagem de fontes que falharam cedo (as que deram certo são mantidas)
+  workflow_dispatch:         # botão "Run workflow"
+  push:
+    branches: [main]
+    paths: ["site/**"]       # mexeu só na página: republica sem coletar
+
+permissions:
+  contents: write            # commit dos dados
+  pages: write               # publicar no GitHub Pages
+  id-token: write
+
+concurrency:
+  group: boletim
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with: { python-version: "3.12" }
+      - name: Coletar previsões e observado
+        run: python coletor/coletar.py
+        env:
+          INMET_TOKEN: ${{ secrets.INMET_TOKEN }}   # opcional: estação A002
+      - name: Salvar dados no repositório
+        run: |
+          git config user.name  "boletim-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -q -m "dados $(TZ=America/Sao_Paulo date +%F)" || { echo "nada novo"; exit 0; }
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+
+  publicar:
+    needs: coletar
+    if: ${{ !cancelled() }}   # publica mesmo se a coleta falhar ou for pulada
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+        with: { ref: main }    # pega o commit de dados recém-criado
+      - name: Montar site
+        run: |
+          mkdir _site
+          cp -r site/* _site/
+          cp -r data _site/data
+          rm -rf _site/data/bruto   # o bruto fica só no repositório
+      - uses: actions/upload-pages-artifact@v4
+        with: { path: _site }
+      - id: deploy
+        uses: actions/deploy-pages@v4
