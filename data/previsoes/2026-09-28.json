@@ -3,7 +3,7 @@
  "fontes": {
   "openmeteo": {
    "status": "ok",
-   "coletado_em": "2026-09-28T11:01:49-03:00",
+   "coletado_em": "2026-09-28T11:05:36-03:00",
    "series": {
     "om_best_match": {
      "rotulo": "Open-Meteo (melhor combinação)",
@@ -798,7 +798,7 @@
   },
   "cempa": {
    "status": "ok",
-   "coletado_em": "2026-09-28T10:51:06-03:00",
+   "coletado_em": "2026-09-28T11:05:47-03:00",
    "rodada": "2026092800",
    "series": {
     "cempa": {
@@ -892,7 +892,7 @@
   },
   "inmet": {
    "status": "ok",
-   "coletado_em": "2026-09-28T11:02:31-03:00",
+   "coletado_em": "2026-09-28T11:05:49-03:00",
    "series": {
     "inmet": {
      "rotulo": "INMET · previsão oficial",
