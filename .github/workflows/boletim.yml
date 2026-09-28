@@ -5,6 +5,11 @@ on:
     - cron: "30 9 * * *"    # 06h30 em Brasília (o CEMPA publica a rodada 00Z por volta das 03h)
     - cron: "30 13 * * *"   # 10h30: repescagem de fontes que falharam cedo (as que deram certo são mantidas)
   workflow_dispatch:         # botão "Run workflow"
+    inputs:
+      forcar:
+        description: "Refazer fontes já coletadas hoje"
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths: ["site/**"]       # mexeu só na página: republica sem coletar
@@ -27,7 +32,7 @@ jobs:
       - uses: actions/setup-python@v6
         with: { python-version: "3.12" }
       - name: Coletar previsões e observado
-        run: python coletor/coletar.py
+        run: python coletor/coletar.py ${{ inputs.forcar && '--forcar' || '' }}
         env:
           INMET_TOKEN: ${{ secrets.INMET_TOKEN }}   # opcional: estação A002
       - name: Salvar dados no repositório
