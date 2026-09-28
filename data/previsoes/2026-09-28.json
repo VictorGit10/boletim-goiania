@@ -3,7 +3,7 @@
  "fontes": {
   "openmeteo": {
    "status": "ok",
-   "coletado_em": "2026-09-28T10:51:06-03:00",
+   "coletado_em": "2026-09-28T11:01:49-03:00",
    "series": {
     "om_best_match": {
      "rotulo": "Open-Meteo (melhor combinação)",
@@ -692,7 +692,7 @@
        "tmax": 35.3,
        "tmin": 20.5,
        "chuva": 0.0,
-       "prob": null,
+       "prob": 11,
        "umid_min": 23,
        "resumo": null
       },
@@ -701,7 +701,7 @@
        "tmax": 35.4,
        "tmin": 21.9,
        "chuva": 0.0,
-       "prob": null,
+       "prob": 11,
        "umid_min": 19,
        "resumo": null
       },
@@ -710,7 +710,7 @@
        "tmax": 34.6,
        "tmin": 20.6,
        "chuva": 0.3,
-       "prob": null,
+       "prob": 11,
        "umid_min": 22,
        "resumo": null
       },
@@ -719,7 +719,7 @@
        "tmax": 35.0,
        "tmin": 21.1,
        "chuva": 0.3,
-       "prob": null,
+       "prob": 22,
        "umid_min": 24,
        "resumo": null
       },
@@ -728,7 +728,7 @@
        "tmax": 33.2,
        "tmin": 19.7,
        "chuva": 3.9,
-       "prob": null,
+       "prob": 83,
        "umid_min": 29,
        "resumo": null
       },
@@ -737,7 +737,7 @@
        "tmax": 26.4,
        "tmin": 18.3,
        "chuva": 6.3,
-       "prob": null,
+       "prob": 60,
        "umid_min": 55,
        "resumo": null
       }
@@ -892,7 +892,7 @@
   },
   "inmet": {
    "status": "ok",
-   "coletado_em": "2026-09-28T10:51:07-03:00",
+   "coletado_em": "2026-09-28T11:02:31-03:00",
    "series": {
     "inmet": {
      "rotulo": "INMET · previsão oficial",
