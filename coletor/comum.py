@@ -1,5 +1,8 @@
 """Utilidades compartilhadas: fuso, caminhos, HTTP e JSON."""
+import functools
 import json
+import ssl
+import tempfile
 import time
 import urllib.error
 import urllib.request
@@ -25,14 +28,51 @@ def hoje_local() -> date:
     return agora_local().date()
 
 
-def http_get(url: str, headers: dict | None = None, timeout: int = 60, tentativas: int = 3) -> bytes:
+@functools.lru_cache(maxsize=None)
+def contexto_com_aia(host: str) -> ssl.SSLContext:
+    """Contexto TLS para servidores que não enviam o certificado intermediário correto.
+
+    Faz o que navegadores e o Windows fazem: lê no certificado do servidor o endereço
+    "CA Issuers" (AIA), baixa o intermediário e o acrescenta à verificação. A cadeia
+    continua sendo validada até uma raiz confiável do sistema.
+    """
+    ctx = ssl.create_default_context()
+    # O intermediário vem por HTTP simples: ele não pode virar âncora de confiança sozinho.
+    # Sem PARTIAL_CHAIN (ligado por padrão no Python 3.13+), a cadeia precisa chegar a uma raiz do sistema.
+    ctx.verify_flags &= ~ssl.VERIFY_X509_PARTIAL_CHAIN
+
+    def decodificar(pem: str) -> dict:
+        with tempfile.NamedTemporaryFile("w", suffix=".pem", delete=False) as f:
+            f.write(pem)
+        try:
+            return ssl._ssl._test_decode_cert(f.name)  # API interna estável; evita dependência externa
+        finally:
+            Path(f.name).unlink(missing_ok=True)
+
+    try:
+        folha = ssl.get_server_certificate((host, 443), timeout=30)
+        for url in decodificar(folha).get("caIssuers", ()):
+            with urllib.request.urlopen(url, timeout=30) as r:
+                dados = r.read()
+            pem = dados.decode("ascii") if dados.startswith(b"-----BEGIN") else ssl.DER_cert_to_PEM_cert(dados)
+            inter = decodificar(pem)
+            if inter["issuer"] == inter["subject"]:
+                raise RuntimeError("intermediário autoassinado recusado")
+            ctx.load_verify_locations(cadata=pem)
+    except Exception as e:  # noqa: BLE001 - se falhar, segue com o contexto padrão
+        print(f"  aviso: não consegui completar a cadeia TLS de {host}: {e}")
+    return ctx
+
+
+def http_get(url: str, headers: dict | None = None, timeout: int = 60, tentativas: int = 3,
+             contexto: ssl.SSLContext | None = None) -> bytes:
     h = {"User-Agent": UA}
     h.update(headers or {})
     erro = None
     for i in range(tentativas):
         try:
             req = urllib.request.Request(url, headers=h)
-            with urllib.request.urlopen(req, timeout=timeout) as r:
+            with urllib.request.urlopen(req, timeout=timeout, context=contexto) as r:
                 if r.status == 204:
                     raise RuntimeError(f"204 (sem conteúdo) em {url}")
                 return r.read()

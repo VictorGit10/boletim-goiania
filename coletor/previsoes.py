@@ -10,7 +10,7 @@ import re
 import struct
 from datetime import date, datetime, timedelta, timezone
 
-from comum import LAT, LON, TZ, http_get, http_json, r1
+from comum import LAT, LON, TZ, contexto_com_aia, http_get, http_json, r1
 
 HORAS_HORARIO = 72  # quantas horas guardar no arquivo horário (a partir de 00h do dia de emissão)
 
@@ -78,7 +78,8 @@ def openmeteo(emissao: date):
 
 # --------------------------------------------------------------------------- CEMPA-Cerrado
 
-CEMPA_BASE = "https://tatu.cempa.ufg.br/HST_Meteogramas/"
+CEMPA_HOST = "tatu.cempa.ufg.br"
+CEMPA_BASE = f"https://{CEMPA_HOST}/HST_Meteogramas/"
 CEMPA_POLIGONO = "c0230"  # município de Goiânia (61 pontos da grade BRAMS 5 km)
 # Ordem das 18 variáveis por passo de tempo, conforme o .ctl
 CEMPA_VARS = ["u_max", "u_min", "u_ave", "v_max", "v_min", "v_ave",
@@ -88,7 +89,9 @@ CEMPA_VARS = ["u_max", "u_min", "u_ave", "v_max", "v_min", "v_ave",
 
 def _cempa_serie(rodada: str):
     """Baixa só os bytes de Goiânia do binário .gra (≈90 KB em vez de 66 MB)."""
-    ctl = http_get(CEMPA_BASE + f"HST{rodada}.ctl", timeout=60).decode("latin-1")
+    # O servidor do CEMPA envia o intermediário errado; completa a cadeia via AIA
+    tls = contexto_com_aia(CEMPA_HOST)
+    ctl = http_get(CEMPA_BASE + f"HST{rodada}.ctl", timeout=60, contexto=tls).decode("latin-1")
     nomes = [l.split()[0] for l in ctl.splitlines() if re.match(r"^c\d{4} ", l)]
     nv = len(nomes)
     nx = int(re.search(r"xdef\s+(\d+)", ctl).group(1))
@@ -101,7 +104,7 @@ def _cempa_serie(rodada: str):
     partes = {}
     for a in range(0, nt, 40):  # o servidor recusa cabeçalhos Range muito longos
         faixas = ",".join(f"{t * bloco + idx * rec}-{t * bloco + idx * rec + rec - 1}" for t in range(a, min(a + 40, nt)))
-        corpo = http_get(CEMPA_BASE + f"HST{rodada}.gra", headers={"Range": "bytes=" + faixas}, timeout=120)
+        corpo = http_get(CEMPA_BASE + f"HST{rodada}.gra", headers={"Range": "bytes=" + faixas}, timeout=120, contexto=tls)
         for ini, dados in re.findall(rb"Content-Range: bytes (\d+)-\d+/\d+\r\n\r\n(.{%d})" % rec, corpo, re.S):
             partes[int(ini) // bloco] = struct.unpack(f"<{nx}f", dados)
     if len(partes) != nt:
