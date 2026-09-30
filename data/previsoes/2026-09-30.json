@@ -891,10 +891,61 @@
    }
   },
   "inmet": {
-   "status": "erro",
-   "erro": "falhou após 3 tentativas: https://apiprevmet3.inmet.gov.br/previsao/5208707 (<urlopen error timed out>)",
-   "coletado_em": "2026-09-30T13:04:36-03:00",
-   "series": {}
+   "status": "ok",
+   "coletado_em": "2026-09-30T15:31:55-03:00",
+   "series": {
+    "inmet": {
+     "rotulo": "INMET · previsão oficial",
+     "grupo": "Oficial",
+     "dias": [
+      {
+       "dia": "2026-09-30",
+       "tmax": 37.0,
+       "tmin": 21.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 10.0,
+       "resumo": "manhã: Poucas nuvens · tarde: Muitas nuvens com pancadas de chuva isoladas · noite: Muitas nuvens com pancadas de chuva e trovoadas"
+      },
+      {
+       "dia": "2026-10-01",
+       "tmax": 35.0,
+       "tmin": 21.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 40.0,
+       "resumo": "manhã: Muitas nuvens · tarde: Muitas nuvens com possibilidade de chuva isolada · noite: Muitas nuvens com pancadas de chuva isoladas"
+      },
+      {
+       "dia": "2026-10-02",
+       "tmax": 30.0,
+       "tmin": 21.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 50.0,
+       "resumo": "Muitas nuvens com pancadas de chuva e trovoadas isoladas"
+      },
+      {
+       "dia": "2026-10-03",
+       "tmax": 27.0,
+       "tmin": 20.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 50.0,
+       "resumo": "Muitas nuvens com pancadas de chuva e trovoadas isoladas"
+      },
+      {
+       "dia": "2026-10-04",
+       "tmax": 28.0,
+       "tmin": 20.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 50.0,
+       "resumo": "Muitas nuvens com pancadas de chuva e trovoadas isoladas"
+      }
+     ]
+    }
+   }
   }
  }
 }
