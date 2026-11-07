@@ -799,7 +799,7 @@
   "cempa": {
    "status": "erro",
    "erro": "CEMPA indisponível: HTTP Error 404: Not Found",
-   "coletado_em": "2026-11-07T12:48:39-03:00",
+   "coletado_em": "2026-11-07T15:13:25-03:00",
    "series": {}
   },
   "inmet": {
