@@ -1,0 +1,162 @@
+{
+ "emissao": "2026-11-17",
+ "fontes": {
+  "openmeteo": {
+   "status": "erro",
+   "erro": "falhou após 3 tentativas: https://api.open-meteo.com/v1/forecast?latitude=-16.68&longitude=-49.25&models=best_match,ecmwf_ifs025,ecmwf_aifs025_single,gfs_seamless,icon_seamless,gem_seamless,jma_seamless,meteofrance_seamless,ukmo_seamless,cma_grapes_global&timezone=America%2FSao_Paulo&daily=temperatu",
+   "coletado_em": "2026-11-17T15:44:24-03:00",
+   "series": {}
+  },
+  "cempa": {
+   "status": "ok",
+   "coletado_em": "2026-11-17T15:44:36-03:00",
+   "rodada": "2026111700",
+   "series": {
+    "cempa": {
+     "rotulo": "CEMPA-Cerrado · BRAMS 5 km",
+     "grupo": "Regional · UFG",
+     "dias": [
+      {
+       "dia": "2026-11-17",
+       "tmax": 28.6,
+       "tmin": 20.1,
+       "chuva": 7.7,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-18",
+       "tmax": 30.4,
+       "tmin": 20.7,
+       "chuva": 7.0,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-19",
+       "tmax": 30.4,
+       "tmin": 20.5,
+       "chuva": 23.9,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-20",
+       "tmax": 24.6,
+       "tmin": 20.5,
+       "chuva": 23.3,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-21",
+       "tmax": 30.6,
+       "tmin": 19.6,
+       "chuva": 0.7,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-22",
+       "tmax": 30.7,
+       "tmin": 21.0,
+       "chuva": 6.4,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-23",
+       "tmax": 30.2,
+       "tmin": 21.7,
+       "chuva": 3.6,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-24",
+       "tmax": 31.7,
+       "tmin": 21.1,
+       "chuva": 6.2,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-25",
+       "tmax": 31.7,
+       "tmin": 21.0,
+       "chuva": 3.3,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      }
+     ]
+    }
+   }
+  },
+  "inmet": {
+   "status": "ok",
+   "coletado_em": "2026-11-17T15:44:37-03:00",
+   "series": {
+    "inmet": {
+     "rotulo": "INMET · previsão oficial",
+     "grupo": "Oficial",
+     "dias": [
+      {
+       "dia": "2026-11-17",
+       "tmax": 28.0,
+       "tmin": 21.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 70.0,
+       "resumo": "manhã: Muitas nuvens com pancadas de chuva isoladas · tarde: Muitas nuvens com pancadas de chuva isoladas · noite: Muitas nuvens com pancadas de chuva e trovoadas isoladas"
+      },
+      {
+       "dia": "2026-11-18",
+       "tmax": 27.0,
+       "tmin": 21.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 60.0,
+       "resumo": "manhã: Muitas nuvens com pancadas de chuva e trovoadas isoladas · tarde: Muitas nuvens com pancadas de chuva e trovoadas isoladas · noite: Muitas nuvens com pancadas de chuva e trovoadas isoladas"
+      },
+      {
+       "dia": "2026-11-19",
+       "tmax": 28.0,
+       "tmin": 21.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 70.0,
+       "resumo": "Nublado com pancadas de chuva e trovoadas isoladas"
+      },
+      {
+       "dia": "2026-11-20",
+       "tmax": 29.0,
+       "tmin": 21.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 80.0,
+       "resumo": "Nublado com pancadas de chuva e trovoadas isoladas"
+      },
+      {
+       "dia": "2026-11-21",
+       "tmax": 30.0,
+       "tmin": 21.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 70.0,
+       "resumo": "Muitas nuvens com pancadas de chuva e trovoadas isoladas"
+      }
+     ]
+    }
+   }
+  }
+ }
+}
