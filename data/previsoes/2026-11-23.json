@@ -1,0 +1,969 @@
+{
+ "emissao": "2026-11-23",
+ "fontes": {
+  "openmeteo": {
+   "status": "ok",
+   "coletado_em": "2026-11-23T18:36:24-03:00",
+   "series": {
+    "om_best_match": {
+     "rotulo": "Open-Meteo (melhor combinação)",
+     "grupo": "Global · via Open-Meteo",
+     "dias": [
+      {
+       "dia": "2026-11-23",
+       "tmax": 28.0,
+       "tmin": 20.9,
+       "chuva": 9.0,
+       "prob": 97,
+       "umid_min": 62,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-24",
+       "tmax": 29.3,
+       "tmin": 21.2,
+       "chuva": 9.9,
+       "prob": 86,
+       "umid_min": 61,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-25",
+       "tmax": 30.7,
+       "tmin": 21.7,
+       "chuva": 6.8,
+       "prob": 78,
+       "umid_min": 58,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-26",
+       "tmax": 29.7,
+       "tmin": 21.9,
+       "chuva": 10.0,
+       "prob": 80,
+       "umid_min": 62,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-27",
+       "tmax": 29.4,
+       "tmin": 21.7,
+       "chuva": 6.0,
+       "prob": 91,
+       "umid_min": 67,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-28",
+       "tmax": 28.0,
+       "tmin": 22.1,
+       "chuva": 4.7,
+       "prob": 75,
+       "umid_min": 68,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-29",
+       "tmax": 28.6,
+       "tmin": 22.0,
+       "chuva": 2.4,
+       "prob": 80,
+       "umid_min": 66,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-30",
+       "tmax": 30.1,
+       "tmin": 21.7,
+       "chuva": 3.0,
+       "prob": 88,
+       "umid_min": 62,
+       "resumo": null
+      },
+      {
+       "dia": "2026-12-01",
+       "tmax": 30.5,
+       "tmin": 21.0,
+       "chuva": 5.4,
+       "prob": 71,
+       "umid_min": 74,
+       "resumo": null
+      },
+      {
+       "dia": "2026-12-02",
+       "tmax": 29.0,
+       "tmin": 20.8,
+       "chuva": 4.2,
+       "prob": 72,
+       "umid_min": 79,
+       "resumo": null
+      }
+     ]
+    },
+    "om_ecmwf_ifs025": {
+     "rotulo": "ECMWF IFS",
+     "grupo": "Global · via Open-Meteo",
+     "dias": [
+      {
+       "dia": "2026-11-23",
+       "tmax": 28.0,
+       "tmin": 21.2,
+       "chuva": 5.9,
+       "prob": 97,
+       "umid_min": 63,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-24",
+       "tmax": 29.4,
+       "tmin": 21.2,
+       "chuva": 10.2,
+       "prob": 86,
+       "umid_min": 63,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-25",
+       "tmax": 30.8,
+       "tmin": 21.8,
+       "chuva": 5.8,
+       "prob": 78,
+       "umid_min": 60,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-26",
+       "tmax": 29.9,
+       "tmin": 22.1,
+       "chuva": 2.1,
+       "prob": 80,
+       "umid_min": 64,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-27",
+       "tmax": 29.5,
+       "tmin": 22.0,
+       "chuva": 10.6,
+       "prob": 91,
+       "umid_min": 72,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-28",
+       "tmax": 28.3,
+       "tmin": 22.4,
+       "chuva": 6.1,
+       "prob": 75,
+       "umid_min": 67,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-29",
+       "tmax": 28.9,
+       "tmin": 22.0,
+       "chuva": 3.0,
+       "prob": 80,
+       "umid_min": 66,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-30",
+       "tmax": 30.4,
+       "tmin": 21.8,
+       "chuva": 2.8,
+       "prob": 88,
+       "umid_min": 61,
+       "resumo": null
+      },
+      {
+       "dia": "2026-12-01",
+       "tmax": 30.7,
+       "tmin": 21.1,
+       "chuva": 6.0,
+       "prob": 71,
+       "umid_min": 72,
+       "resumo": null
+      },
+      {
+       "dia": "2026-12-02",
+       "tmax": 29.3,
+       "tmin": 21.0,
+       "chuva": 4.4,
+       "prob": 72,
+       "umid_min": 81,
+       "resumo": null
+      }
+     ]
+    },
+    "om_ecmwf_aifs025_single": {
+     "rotulo": "ECMWF AIFS (IA)",
+     "grupo": "Global · via Open-Meteo",
+     "dias": [
+      {
+       "dia": "2026-11-23",
+       "tmax": 27.5,
+       "tmin": 21.6,
+       "chuva": 7.4,
+       "prob": null,
+       "umid_min": 68,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-24",
+       "tmax": 27.9,
+       "tmin": 21.5,
+       "chuva": 14.2,
+       "prob": null,
+       "umid_min": 67,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-25",
+       "tmax": 28.7,
+       "tmin": 22.2,
+       "chuva": 6.5,
+       "prob": null,
+       "umid_min": 64,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-26",
+       "tmax": 28.7,
+       "tmin": 22.1,
+       "chuva": 8.7,
+       "prob": null,
+       "umid_min": 64,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-27",
+       "tmax": 28.1,
+       "tmin": 22.1,
+       "chuva": 11.9,
+       "prob": null,
+       "umid_min": 68,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-28",
+       "tmax": 27.2,
+       "tmin": 22.0,
+       "chuva": 15.9,
+       "prob": null,
+       "umid_min": 68,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-29",
+       "tmax": 28.4,
+       "tmin": 21.8,
+       "chuva": 5.6,
+       "prob": null,
+       "umid_min": 64,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-30",
+       "tmax": 29.2,
+       "tmin": 21.4,
+       "chuva": 5.2,
+       "prob": null,
+       "umid_min": 60,
+       "resumo": null
+      },
+      {
+       "dia": "2026-12-01",
+       "tmax": 29.6,
+       "tmin": 21.1,
+       "chuva": 5.0,
+       "prob": null,
+       "umid_min": 58,
+       "resumo": null
+      },
+      {
+       "dia": "2026-12-02",
+       "tmax": 28.7,
+       "tmin": 21.2,
+       "chuva": 5.2,
+       "prob": null,
+       "umid_min": 62,
+       "resumo": null
+      }
+     ]
+    },
+    "om_gfs_seamless": {
+     "rotulo": "GFS · NOAA",
+     "grupo": "Global · via Open-Meteo",
+     "dias": [
+      {
+       "dia": "2026-11-23",
+       "tmax": 27.2,
+       "tmin": 20.6,
+       "chuva": 0.9,
+       "prob": 74,
+       "umid_min": 62,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-24",
+       "tmax": 31.8,
+       "tmin": 21.0,
+       "chuva": 0.0,
+       "prob": 77,
+       "umid_min": 44,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-25",
+       "tmax": 34.0,
+       "tmin": 22.3,
+       "chuva": 0.0,
+       "prob": 61,
+       "umid_min": 38,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-26",
+       "tmax": 33.9,
+       "tmin": 19.8,
+       "chuva": 57.2,
+       "prob": 75,
+       "umid_min": 39,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-27",
+       "tmax": 28.9,
+       "tmin": 20.7,
+       "chuva": 3.7,
+       "prob": 75,
+       "umid_min": 57,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-28",
+       "tmax": 25.0,
+       "tmin": 20.7,
+       "chuva": 1.8,
+       "prob": 77,
+       "umid_min": 68,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-29",
+       "tmax": 29.6,
+       "tmin": 20.1,
+       "chuva": 8.1,
+       "prob": 56,
+       "umid_min": 52,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-30",
+       "tmax": 33.2,
+       "tmin": 20.3,
+       "chuva": 0.6,
+       "prob": 39,
+       "umid_min": 39,
+       "resumo": null
+      },
+      {
+       "dia": "2026-12-01",
+       "tmax": 33.7,
+       "tmin": 21.0,
+       "chuva": 1.9,
+       "prob": 35,
+       "umid_min": 37,
+       "resumo": null
+      },
+      {
+       "dia": "2026-12-02",
+       "tmax": 29.5,
+       "tmin": 20.5,
+       "chuva": 0.8,
+       "prob": 40,
+       "umid_min": 51,
+       "resumo": null
+      }
+     ]
+    },
+    "om_icon_seamless": {
+     "rotulo": "ICON · DWD",
+     "grupo": "Global · via Open-Meteo",
+     "dias": [
+      {
+       "dia": "2026-11-23",
+       "tmax": 29.5,
+       "tmin": 22.3,
+       "chuva": 3.8,
+       "prob": 35,
+       "umid_min": 56,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-24",
+       "tmax": 30.8,
+       "tmin": 22.4,
+       "chuva": 0.0,
+       "prob": 38,
+       "umid_min": 53,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-25",
+       "tmax": 32.5,
+       "tmin": 22.3,
+       "chuva": 0.4,
+       "prob": 50,
+       "umid_min": 48,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-26",
+       "tmax": 33.1,
+       "tmin": 23.2,
+       "chuva": 9.2,
+       "prob": 73,
+       "umid_min": 49,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-27",
+       "tmax": 29.0,
+       "tmin": 23.2,
+       "chuva": 17.5,
+       "prob": 66,
+       "umid_min": 72,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-28",
+       "tmax": 28.5,
+       "tmin": 23.0,
+       "chuva": 19.5,
+       "prob": 58,
+       "umid_min": 64,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-29",
+       "tmax": 29.9,
+       "tmin": 23.4,
+       "chuva": 9.0,
+       "prob": 75,
+       "umid_min": 64,
+       "resumo": null
+      }
+     ]
+    },
+    "om_gem_seamless": {
+     "rotulo": "GEM · Canadá",
+     "grupo": "Global · via Open-Meteo",
+     "dias": [
+      {
+       "dia": "2026-11-23",
+       "tmax": 27.3,
+       "tmin": 21.2,
+       "chuva": 0.0,
+       "prob": 24,
+       "umid_min": 70,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-24",
+       "tmax": 29.9,
+       "tmin": 20.3,
+       "chuva": 0.0,
+       "prob": 58,
+       "umid_min": 58,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-25",
+       "tmax": 31.4,
+       "tmin": 20.5,
+       "chuva": 0.0,
+       "prob": 48,
+       "umid_min": 53,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-26",
+       "tmax": 32.4,
+       "tmin": 22.5,
+       "chuva": 10.1,
+       "prob": 38,
+       "umid_min": 52,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-27",
+       "tmax": 30.5,
+       "tmin": 21.5,
+       "chuva": 0.0,
+       "prob": 41,
+       "umid_min": 60,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-28",
+       "tmax": 32.6,
+       "tmin": 19.9,
+       "chuva": 0.0,
+       "prob": 25,
+       "umid_min": 47,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-29",
+       "tmax": 32.2,
+       "tmin": 22.2,
+       "chuva": 0.0,
+       "prob": 44,
+       "umid_min": 51,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-30",
+       "tmax": 32.0,
+       "tmin": 22.4,
+       "chuva": 10.8,
+       "prob": 15,
+       "umid_min": 56,
+       "resumo": null
+      },
+      {
+       "dia": "2026-12-01",
+       "tmax": 30.5,
+       "tmin": 20.9,
+       "chuva": 8.1,
+       "prob": 67,
+       "umid_min": 68,
+       "resumo": null
+      },
+      {
+       "dia": "2026-12-02",
+       "tmax": 29.8,
+       "tmin": 20.5,
+       "chuva": 30.9,
+       "prob": 52,
+       "umid_min": 69,
+       "resumo": null
+      }
+     ]
+    },
+    "om_jma_seamless": {
+     "rotulo": "JMA · Japão",
+     "grupo": "Global · via Open-Meteo",
+     "dias": [
+      {
+       "dia": "2026-11-23",
+       "tmax": 28.2,
+       "tmin": 22.5,
+       "chuva": 3.9,
+       "prob": null,
+       "umid_min": 70,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-24",
+       "tmax": 29.6,
+       "tmin": 22.2,
+       "chuva": 2.5,
+       "prob": null,
+       "umid_min": 63,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-25",
+       "tmax": 31.3,
+       "tmin": 22.8,
+       "chuva": 3.6,
+       "prob": null,
+       "umid_min": 54,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-26",
+       "tmax": 31.1,
+       "tmin": 23.1,
+       "chuva": 10.2,
+       "prob": null,
+       "umid_min": 60,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-27",
+       "tmax": 27.6,
+       "tmin": 23.1,
+       "chuva": 22.1,
+       "prob": null,
+       "umid_min": 81,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-28",
+       "tmax": 29.4,
+       "tmin": 22.7,
+       "chuva": 14.0,
+       "prob": null,
+       "umid_min": 68,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-29",
+       "tmax": 29.2,
+       "tmin": 22.8,
+       "chuva": 4.2,
+       "prob": null,
+       "umid_min": 68,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-30",
+       "tmax": 27.5,
+       "tmin": 22.6,
+       "chuva": 13.1,
+       "prob": null,
+       "umid_min": 80,
+       "resumo": null
+      },
+      {
+       "dia": "2026-12-01",
+       "tmax": 26.7,
+       "tmin": 22.0,
+       "chuva": 17.9,
+       "prob": null,
+       "umid_min": 82,
+       "resumo": null
+      },
+      {
+       "dia": "2026-12-02",
+       "tmax": 28.5,
+       "tmin": 21.3,
+       "chuva": 3.4,
+       "prob": null,
+       "umid_min": 70,
+       "resumo": null
+      }
+     ]
+    },
+    "om_meteofrance_seamless": {
+     "rotulo": "Météo-France",
+     "grupo": "Global · via Open-Meteo",
+     "dias": [
+      {
+       "dia": "2026-11-23",
+       "tmax": 28.1,
+       "tmin": 21.7,
+       "chuva": 7.3,
+       "prob": null,
+       "umid_min": 76,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-24",
+       "tmax": 29.8,
+       "tmin": 21.3,
+       "chuva": 0.0,
+       "prob": null,
+       "umid_min": 65,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-25",
+       "tmax": 31.3,
+       "tmin": 22.4,
+       "chuva": 0.0,
+       "prob": null,
+       "umid_min": 58,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-26",
+       "tmax": 31.2,
+       "tmin": 23.0,
+       "chuva": 4.8,
+       "prob": null,
+       "umid_min": 63,
+       "resumo": null
+      }
+     ]
+    },
+    "om_ukmo_seamless": {
+     "rotulo": "UKMO · Reino Unido",
+     "grupo": "Global · via Open-Meteo",
+     "dias": [
+      {
+       "dia": "2026-11-23",
+       "tmax": 29.0,
+       "tmin": 21.5,
+       "chuva": 3.7,
+       "prob": 78,
+       "umid_min": 61,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-24",
+       "tmax": 29.8,
+       "tmin": 21.0,
+       "chuva": 0.9,
+       "prob": 67,
+       "umid_min": 58,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-25",
+       "tmax": 31.4,
+       "tmin": 21.6,
+       "chuva": 10.7,
+       "prob": 50,
+       "umid_min": 52,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-26",
+       "tmax": 31.3,
+       "tmin": 22.3,
+       "chuva": 41.2,
+       "prob": 72,
+       "umid_min": 54,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-27",
+       "tmax": 26.7,
+       "tmin": 22.2,
+       "chuva": 15.5,
+       "prob": 78,
+       "umid_min": 76,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-28",
+       "tmax": 27.3,
+       "tmin": 22.4,
+       "chuva": 7.7,
+       "prob": 50,
+       "umid_min": 66,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-29",
+       "tmax": 29.8,
+       "tmin": 22.6,
+       "chuva": 0.4,
+       "prob": 56,
+       "umid_min": 53,
+       "resumo": null
+      }
+     ]
+    },
+    "om_cma_grapes_global": {
+     "rotulo": "CMA · China",
+     "grupo": "Global · via Open-Meteo",
+     "dias": [
+      {
+       "dia": "2026-11-23",
+       "tmax": 28.6,
+       "tmin": 23.2,
+       "chuva": 3.5,
+       "prob": null,
+       "umid_min": 65,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-24",
+       "tmax": 31.1,
+       "tmin": 23.7,
+       "chuva": 0.2,
+       "prob": null,
+       "umid_min": 53,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-25",
+       "tmax": 29.6,
+       "tmin": 24.1,
+       "chuva": 4.9,
+       "prob": null,
+       "umid_min": 59,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-26",
+       "tmax": 29.6,
+       "tmin": 24.1,
+       "chuva": 8.4,
+       "prob": null,
+       "umid_min": 60,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-27",
+       "tmax": 31.7,
+       "tmin": 23.8,
+       "chuva": 0.1,
+       "prob": null,
+       "umid_min": 50,
+       "resumo": null
+      }
+     ]
+    }
+   }
+  },
+  "cempa": {
+   "status": "ok",
+   "coletado_em": "2026-11-23T18:36:33-03:00",
+   "rodada": "2026112300",
+   "series": {
+    "cempa": {
+     "rotulo": "CEMPA-Cerrado · BRAMS 5 km",
+     "grupo": "Regional · UFG",
+     "dias": [
+      {
+       "dia": "2026-11-23",
+       "tmax": 31.0,
+       "tmin": 20.2,
+       "chuva": 6.7,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-24",
+       "tmax": 30.0,
+       "tmin": 20.9,
+       "chuva": 5.0,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-25",
+       "tmax": 31.7,
+       "tmin": 21.5,
+       "chuva": 3.2,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-26",
+       "tmax": 30.6,
+       "tmin": 21.1,
+       "chuva": 12.8,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-27",
+       "tmax": 23.4,
+       "tmin": 21.1,
+       "chuva": 11.0,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-28",
+       "tmax": 27.7,
+       "tmin": 20.7,
+       "chuva": 5.9,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-29",
+       "tmax": 32.9,
+       "tmin": 21.4,
+       "chuva": 2.1,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-11-30",
+       "tmax": 33.4,
+       "tmin": 21.5,
+       "chuva": 0.7,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      },
+      {
+       "dia": "2026-12-01",
+       "tmax": 32.7,
+       "tmin": 21.2,
+       "chuva": 0.2,
+       "prob": null,
+       "umid_min": null,
+       "resumo": null
+      }
+     ]
+    }
+   }
+  },
+  "inmet": {
+   "status": "ok",
+   "coletado_em": "2026-11-23T18:36:35-03:00",
+   "series": {
+    "inmet": {
+     "rotulo": "INMET · previsão oficial",
+     "grupo": "Oficial",
+     "dias": [
+      {
+       "dia": "2026-11-23",
+       "tmax": 30.0,
+       "tmin": 21.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 65.0,
+       "resumo": "manhã: Muitas nuvens com pancadas de chuva isoladas · tarde: Muitas nuvens com pancadas de chuva e trovoadas isoladas · noite: Muitas nuvens com pancadas de chuva isoladas"
+      },
+      {
+       "dia": "2026-11-24",
+       "tmax": 29.0,
+       "tmin": 21.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 60.0,
+       "resumo": "manhã: Muitas nuvens com possibilidade de chuva isolada · tarde: Muitas nuvens com pancadas de chuva e trovoadas · noite: Muitas nuvens com possibilidade de chuva isolada"
+      },
+      {
+       "dia": "2026-11-25",
+       "tmax": 30.0,
+       "tmin": 21.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 65.0,
+       "resumo": "Muitas nuvens com possibilidade de chuva isolada"
+      },
+      {
+       "dia": "2026-11-26",
+       "tmax": 31.0,
+       "tmin": 22.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 65.0,
+       "resumo": "Muitas nuvens com pancadas de chuva e trovoadas isoladas"
+      },
+      {
+       "dia": "2026-11-27",
+       "tmax": 29.0,
+       "tmin": 22.0,
+       "chuva": null,
+       "prob": null,
+       "umid_min": 70.0,
+       "resumo": "Nublado com pancadas de chuva e trovoadas isoladas"
+      }
+     ]
+    }
+   }
+  }
+ }
+}
